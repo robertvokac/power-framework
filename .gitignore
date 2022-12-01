@@ -1,0 +1,12 @@
+#files to ignore
+
+**.metadata/**
+**.recommenders/**
+target
+**build/**
+*.idea/**
+*.iml
+
+**nb-configuration.xml
+/power-core/nbproject/
+/power-utils/nbproject/
