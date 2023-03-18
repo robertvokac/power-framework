@@ -1,0 +1,6 @@
+from=name@gmail.com
+serverurl=smtp.gmail.com
+serverport=465
+username=name@gmail.com
+password=password
+ssl=1
