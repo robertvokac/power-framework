@@ -113,8 +113,7 @@ public abstract class DateTime implements Comparable<DateTime> {
      * <p>
      * Sets all values from String
      *
-     * @param dateTimeInString This String has following format: 2016-12-31
-     *                         24:45:14:453 yyyy-MM-dd HH:mm:ss:SSS
+     * @param dateTimeAsLong
      */
     public DateTime(long dateTimeAsLong) {
         String str = String.valueOf(dateTimeAsLong);

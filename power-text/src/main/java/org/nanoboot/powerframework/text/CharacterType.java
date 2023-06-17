@@ -43,7 +43,7 @@ public enum CharacterType {
     UPPER_LETTER,
 
     /**
-     * For example: !@#$%^&*()~?.
+     * For example: !@#$%^&amp;*()~?.
      */
     OTHER_PRINTABLE,
 

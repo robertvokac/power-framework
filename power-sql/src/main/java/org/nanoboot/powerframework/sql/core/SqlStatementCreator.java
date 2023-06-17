@@ -53,8 +53,6 @@ public class SqlStatementCreator {
 
     /**
      * Setter for name.
-     *
-     * @param nameIn
      */
     public static String createSelect(String tableName, String conditions) {
         String sql = SELECT_ALL_FROM + tableName + (conditions != null ? (" WHERE " + conditions) : "");
@@ -65,7 +63,6 @@ public class SqlStatementCreator {
     /**
      * Setter for name.
      *
-     * @param nameIn
      */
     public static String createSelectUuids(String tableName, String conditions) {
         String sql = SELECT_UUID_FROM + tableName + (conditions != null ? (" WHERE " + conditions) : "");
@@ -76,7 +73,6 @@ public class SqlStatementCreator {
     /**
      * Setter for name.
      *
-     * @param nameIn
      */
     public static String createInsert(String tableName, String... valuesIn) {
         String valuesAsString;
@@ -100,7 +96,6 @@ public class SqlStatementCreator {
     /**
      * Setter for name.
      *
-     * @param nameIn
      */
     public static String createUpdate(String tableName, String conditions, ColumnNameValue... columnNameValues) {
 

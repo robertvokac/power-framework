@@ -126,7 +126,6 @@ public final class BinaryTreeNode<T> extends AbstractTreeNode<T> {
     /**
      * @param typeIn node type
      * @param nodeIn node to set
-     * @return
      */
     public void setNode(
             final BinaryTreeNodeType typeIn,

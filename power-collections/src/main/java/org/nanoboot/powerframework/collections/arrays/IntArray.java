@@ -26,8 +26,6 @@ import java.util.Iterator;
  * There will be the choice to select the starting index:0 will be default
  * (maybe), but 1 or something else will be possible.
  *
- * @param <CLASS>
- *
  * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
  * @since 0.0.0
  */

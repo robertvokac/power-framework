@@ -43,7 +43,7 @@ public final class ReflectionUtils {
     /**
      * @param classFullName class full name
      * @return Class instance with the given name
-     * @throws PowerException, if there is found no such class
+     * @throws PowerException if there is found no such class
      */
     public static Class getClassForName(final String classFullName) {
         Class clazz = null;
@@ -59,7 +59,7 @@ public final class ReflectionUtils {
      * @param parameterTypes parameter types
      *
      * @return Constructor instance with the given parameter types
-     * @throws PowerException, if there is found no such class
+     * @throws PowerException if there is found no such class
      */
     public static Constructor getConstructor(
             final Class clazz, final Class<?>... parameterTypes) {
@@ -86,7 +86,7 @@ public final class ReflectionUtils {
      * @param parameters parameters
      *
      * @return Object instance for the given constructor
-     * @throws PowerException, if instantiation failed
+     * @throws PowerException if instantiation failed
      */
     public static Object newInstance(
             final Constructor constructor,
@@ -107,7 +107,7 @@ public final class ReflectionUtils {
      * @param parameterTypes parameter types
      *
      * @return Constructor instance with the given parameter types
-     * @throws PowerException, if there is found no such method
+     * @throws PowerException if there is found no such method
      */
     public static Method getMethod(
             final Class forClass,

@@ -50,8 +50,6 @@ public class Macro {
      * Constructor
      *
      * Constructor description
-     *
-     * @param nameIn
      */
     public Macro(String content, TextProcessorI processor) {
         this.content = content;

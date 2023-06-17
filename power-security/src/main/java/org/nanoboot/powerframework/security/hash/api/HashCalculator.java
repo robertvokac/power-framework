@@ -74,7 +74,7 @@ public interface HashCalculator {
     /**
      * @param hex1
      * @param hex2
-     * @return if 0, then hex1=hex2. if -1, then hex1<hex2. if 1, then hex1>hex2.
+     * @return if 0, then hex1=hex2. if -1, then hex1 &lt; hex2. if 1, then hex1 &gt; hex2.
      */
     default int compareHexNumbers(String hex1, String hex2) {
         int result = hex1.compareTo(hex2);

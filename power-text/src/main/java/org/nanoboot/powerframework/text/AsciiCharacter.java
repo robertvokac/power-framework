@@ -57,7 +57,7 @@ public enum AsciiCharacter {
      */
     PERCENT_SIGN(37, "percent sign", CharacterType.OTHER_PRINTABLE),
     /**
-     * Constant for ascii character constant '&'.
+     * Constant for ascii character constant '&amp;'.
      */
     AMPERSAND(38, "ampersand", CharacterType.OTHER_PRINTABLE),
     /**
@@ -175,7 +175,7 @@ public enum AsciiCharacter {
             CharacterType.OTHER_PRINTABLE,
             ':'),
     /**
-     * Constant for ascii character constant '<'.
+     * Constant for ascii character constant '&lt;'.
      */
     LESS_THAN_SIGN(60, "less than sign",
             CharacterType.OTHER_PRINTABLE,
