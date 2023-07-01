@@ -61,13 +61,13 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>${junit4.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.xerial</groupId>
             <artifactId>sqlite-jdbc</artifactId>
-            <version>3.28.0</version>
+            <version>${sqlite-jdbc.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
