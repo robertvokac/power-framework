@@ -56,6 +56,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
         <module>power-web</module>
 		
         <module>power-wiki</module>
+        <module>power-bean</module>
         <module>power-redmond</module>
         <module>power-shark</module>
         <module>power-sound</module>
