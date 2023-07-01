@@ -60,7 +60,6 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
         <module>power-sql</module>
         <module>power-db</module>
         <module>power-persistence</module>
-        <module>power-svg</module>
 
         <module>power-view</module>
         <module>power-xml</module>
