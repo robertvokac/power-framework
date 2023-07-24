@@ -33,4 +33,5 @@ module powerframework.io {
     requires java.logging;
     requires powerframework.utils;
     exports org.nanoboot.powerframework.io.bit.base64;
+    exports org.nanoboot.powerframework.io.utils;
 }
