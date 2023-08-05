@@ -21,6 +21,7 @@
 package org.nanoboot.powerframework.time.moment;
 
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 
 /**
  * This class stores date time without time zone information.
@@ -55,12 +56,33 @@ public final class LocalDateTime extends DateTime {
      *
      * @param ldt java.time.LocalDateTime instance
      *
-     * @return a java.time.LocalDateTime instance from this object
+     * @return a org.nanoboot.powerframework.time.moment.LocalDateTime instance from this object
      */
     public static LocalDateTime toPowerLocalDateTime(java.time.LocalDateTime ldt) {
         return new LocalDateTime(ldt.getYear(), ldt.getDayOfMonth(), ldt.getDayOfMonth(), ldt.getHour(), ldt.getMinute(), ldt.getSecond(), ldt.getSecond());
     }
 
+     /**
+     *
+     ** Creates new LocalDateTime from java.util.Date.
+     * @param javaUtilDate java.util.Date instance
+     *
+     * @return a org.nanoboot.powerframework.time.moment.LocalDateTime instance from this object
+     */
+    public static LocalDateTime convertJavaUtilDateToPowerLocalDateTime(java.util.Date javaUtilDate) {
+           Calendar cal = Calendar.getInstance();
+        cal.setTime(javaUtilDate);
+        
+        return new LocalDateTime(
+                cal.get(Calendar.YEAR),
+                cal.get(Calendar.MONTH) + 1,
+                cal.get(Calendar.DAY_OF_MONTH),
+                cal.get(Calendar.HOUR_OF_DAY),
+                cal.get(Calendar.MINUTE),
+                cal.get(Calendar.SECOND),
+                cal.get(Calendar.MILLISECOND));
+    }
+    
     /**
      * Constructor
      *

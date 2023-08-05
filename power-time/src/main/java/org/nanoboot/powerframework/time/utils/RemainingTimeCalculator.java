@@ -25,7 +25,7 @@ package org.nanoboot.powerframework.time.utils;
  * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
  * @since 0.0.0
  */
-class RemainingTimeCalculator {
+public class RemainingTimeCalculator {
     private long startNanoTime = 0;
     private long total;
     private long done = 0;
@@ -63,6 +63,6 @@ class RemainingTimeCalculator {
     }
 
     public String getMessage() {
-        return "Time elapsed: " + this.elapsedSecondSinceStart() + " seconds. Time left: " + this.remainingSecondsUntilEnd() + " seconds. Done: " + this.getDoneCount() + " tasks.";
+        return "Elapsed=" + this.elapsedSecondSinceStart() + " seconds Left=" + this.remainingSecondsUntilEnd() + " seconds Done=" + this.getDoneCount() + " tasks.";
     }
 }
