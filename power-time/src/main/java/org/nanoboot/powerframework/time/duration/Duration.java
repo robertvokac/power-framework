@@ -1,4 +1,3 @@
-
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // power-framework: Java library with many purposes of usage.
 // Copyright (C) 2016-2022 the original author or authors.
@@ -17,7 +16,6 @@
 // License along with this library; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 ///////////////////////////////////////////////////////////////////////////////////////////////
-
 package org.nanoboot.powerframework.time.duration;
 
 import org.nanoboot.powerframework.random.generators.RandomGenerator;
@@ -133,7 +131,7 @@ public final class Duration {
         java.time.LocalDateTime javaLocalDateTime = universalDateTime.removeUniversalTimeZone().toJavaLocalDateTime();
         java.time.Duration javaDuration = duration.toJavaDuration();
         java.time.LocalDateTime newJavaLocalDateTime;
-        if(trueForAddingFalseForSubtracting) {
+        if (trueForAddingFalseForSubtracting) {
             newJavaLocalDateTime = javaLocalDateTime.plus(javaDuration);
         } else {
             newJavaLocalDateTime = javaLocalDateTime.minus(javaDuration);
@@ -182,7 +180,7 @@ public final class Duration {
             boolean trueForAddingFalseForSubtracting) {
         UniversalDateTime universalDateTime = zonedDateTime.toUniversalDateTime();
         UniversalDateTime newUniversalDateTime;
-        if(trueForAddingFalseForSubtracting) {
+        if (trueForAddingFalseForSubtracting) {
             newUniversalDateTime = fromUniversalDateTimePlusDurationCreateNewUniversalDateTime(universalDateTime, duration);
         } else {
             newUniversalDateTime = fromUniversalDateTimeMinusDurationCreateNewUniversalDateTime(universalDateTime, duration);
@@ -276,8 +274,8 @@ public final class Duration {
      * @param string representing the new Duration
      */
     public Duration(String string) {
-        String[] splitString = string.replace("\\.",":").split("\\:+");
-        if(splitString.length != 5) {
+        String[] splitString = string.replace("\\.", ":").split("\\:+");
+        if (splitString.length != 5) {
             throw new TimeException("Input String has wrong format.");
         }
         try {
@@ -427,4 +425,27 @@ public final class Duration {
                 DOT,
                 String.format("%03d", get(TimeUnit.MILLISECOND)));
     }
-}
+
+    public String toHumanString() {
+        long days = get(TimeUnit.DAY);
+        long hours = get(TimeUnit.HOUR);
+        long minutes = get(TimeUnit.MINUTE);
+        long seconds = get(TimeUnit.SECOND);
+        long milliseconds = get(TimeUnit.MILLISECOND);
+        StringBuilder sb = new StringBuilder();
+        if (!this.isPositive()) {
+            sb.append(MINUS).append(" ");
+        }
+            if (days > 0) {
+                sb.append(days).append(" ").append(TimeUnit.DAY.name().toLowerCase()).append((days > 1) ? "s" : "").append(" ");
+            }
+            if (hours > 0) {
+                sb.append(hours).append(" ").append(TimeUnit.HOUR.name().toLowerCase()).append((hours > 1) ? "s" : "").append(" ");
+            }
+            if (minutes > 0) {
+                sb.append(minutes).append(" ").append(TimeUnit.MINUTE.name().toLowerCase()).append((minutes > 1) ? "s" : "").append(" ");
+            }
+            sb.append(seconds).append(" ").append(TimeUnit.SECOND.name().toLowerCase()).append((seconds > 1) ? "s" : "");
+            return sb.toString();
+        }
+    }
