@@ -54,7 +54,8 @@ public class RemainingTimeCalculator {
 
     public long remainingSecondsUntilEnd() {
         long remains = this.total - this.done;
-        long remainsSeconds = (this.elapsedSecondSinceStart() / this.done) * remains;
+        double elapsedSecondSinceStartDouble = (double) elapsedSecondSinceStart();
+        long remainsSeconds = (long)((elapsedSecondSinceStartDouble / ((double)this.done)) * remains);
         return remainsSeconds;
     }
 

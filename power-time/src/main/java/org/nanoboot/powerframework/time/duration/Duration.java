@@ -42,6 +42,7 @@ public final class Duration {
     private static final String PLUS = "+";
     private static final String MINUS = "-";
     private static final String COLON = ":";
+    private static final String DOT = ".";
 
     /**
      *
@@ -275,7 +276,7 @@ public final class Duration {
      * @param string representing the new Duration
      */
     public Duration(String string) {
-        String[] splitString = string.split("\\:+");
+        String[] splitString = string.replace("\\.",":").split("\\:+");
         if(splitString.length != 5) {
             throw new TimeException("Input String has wrong format.");
         }
@@ -416,14 +417,14 @@ public final class Duration {
     @Override
     public String toString() {
         return StringUtils.appendObjects(this.isPositive() ? PLUS : MINUS,
-                get(TimeUnit.DAY),
+                String.format("%02d", get(TimeUnit.DAY)),
                 COLON,
-                get(TimeUnit.HOUR),
+                String.format("%02d", get(TimeUnit.HOUR)),
                 COLON,
-                get(TimeUnit.MINUTE),
+                String.format("%02d", get(TimeUnit.MINUTE)),
                 COLON,
-                get(TimeUnit.SECOND),
-                COLON,
-                get(TimeUnit.MILLISECOND));
+                String.format("%02d", get(TimeUnit.SECOND)),
+                DOT,
+                String.format("%03d", get(TimeUnit.MILLISECOND)));
     }
 }
