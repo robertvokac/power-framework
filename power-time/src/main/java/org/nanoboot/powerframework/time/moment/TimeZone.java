@@ -56,6 +56,10 @@ public class TimeZone {
     public static boolean isTimeZoneIDValid(String timeZoneID) {
         return listOfTimeZones.contains(timeZoneID);
     }
+    
+    public static TimeZone getDefaultTimeZone() {
+        return new TimeZone(java.util.TimeZone.getDefault().getID());
+    }
     private final String timeZoneID;
 
     /**

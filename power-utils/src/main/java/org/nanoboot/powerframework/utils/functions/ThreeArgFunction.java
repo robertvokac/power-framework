@@ -1,7 +1,6 @@
-
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // power-framework: Java library with many purposes of usage.
-// Copyright (C) 2016-2022 the original author or authors.
+// Copyright (C) 2016-2023 the original author or authors.
 //
 // This library is free software; you can redistribute it and/or
 // modify it under the terms of the GNU Lesser General Public
@@ -17,21 +16,16 @@
 // License along with this library; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 ///////////////////////////////////////////////////////////////////////////////////////////////
+package org.nanoboot.powerframework.utils.functions;
 
 /**
- * 
+ *
  *
  * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
- * @since 0.0.0
+ * @since 2.0.1
  */
-module powerframework.utils {
-    requires powerframework.core;
-    requires lombok;
-    requires powerframework.text;
-    requires powerframework.reflection;
-    requires org.jgrapht.core;
-    exports org.nanoboot.powerframework.utils;
-    exports org.nanoboot.powerframework.utils.annotations;
-    exports org.nanoboot.powerframework.utils.dependencies;
-    exports org.nanoboot.powerframework.utils.functions;
+@FunctionalInterface
+public interface ThreeArgFunction<T, U, V, R> {
+
+    R apply(T t, U u, V v);
 }
