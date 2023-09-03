@@ -40,7 +40,7 @@ public class RemainingTimeCalculator {
         RemainingTimeCalculator rtc = new RemainingTimeCalculator(1000);
         for(int i = 0;i< 1000;i++) {
             try {
-                Thread.sleep((long) (Math.random() * 500));
+                Thread.sleep((long) (Math.random() * 100));
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }
@@ -112,17 +112,17 @@ public class RemainingTimeCalculator {
         return this.total;
     }
 
-    private static final String PLACEHOLDER_DONE = "{DONE}";
-    private static final String PLACEHOLDER_TOTAL = "{TOTAL}";
-    private static final String PLACEHOLDER_PROGRESS = "{PROGRESS}";
-    private static final String PLACEHOLDER_PROGRESS_BAR = "{PROGRESS_BAR}";
-    private static final String PLACEHOLDER_ELAPSED = "{ELAPSED}";
-    private static final String PLACEHOLDER_LEFT = "{LEFT}";
-    private static final String PLACEHOLDER_TASKS_PER_SECOND = "{TASKS_PER_SECOND}";
-    private static final String PLACEHOLDER_TIME_OF_COMPLETION = "{TIME_OF_COMPLETION}";
-    private static final String PLACEHOLDER_ELAPSED_LONG = "{ELAPSED_LONG}";
-    private static final String PLACEHOLDER_LEFT_LONG = "{LEFT_LONG}";
-    private static final String DEFAULT_STATUS_TEMPLATE = "Done {DONE}/{TOTAL} {PROGRESS} {PROGRESS_BAR} Elapsed={ELAPSED_LONG} LEFT={LEFT_LONG} PERFORMANCE={TASKS_PER_SECOND} Will finish at={TIME_OF_COMPLETION}";
+    public static final String PLACEHOLDER_DONE = "{DONE}";
+    public static final String PLACEHOLDER_TOTAL = "{TOTAL}";
+    public static final String PLACEHOLDER_PROGRESS = "{PROGRESS}";
+    public static final String PLACEHOLDER_PROGRESS_BAR = "{PROGRESS_BAR}";
+    public static final String PLACEHOLDER_ELAPSED = "{ELAPSED}";
+    public static final String PLACEHOLDER_LEFT = "{LEFT}";
+    public static final String PLACEHOLDER_TASKS_PER_SECOND = "{TASKS_PER_SECOND}";
+    public static final String PLACEHOLDER_TIME_OF_COMPLETION = "{TIME_OF_COMPLETION}";
+    public static final String PLACEHOLDER_ELAPSED_LONG = "{ELAPSED_LONG}";
+    public static final String PLACEHOLDER_LEFT_LONG = "{LEFT_LONG}";
+    public static final String DEFAULT_STATUS_TEMPLATE = "Done {DONE}/{TOTAL} {PROGRESS} {PROGRESS_BAR} Elapsed={ELAPSED_LONG} LEFT={LEFT_LONG} PERFORMANCE={TASKS_PER_SECOND} Will finish at={TIME_OF_COMPLETION}";
 
     public String currentStatus() {
         return currentStatus(null);
