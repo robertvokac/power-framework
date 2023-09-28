@@ -29,7 +29,7 @@ import org.nanoboot.powerframework.utils.functions.ThreeArgFunction;
  * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
  * @since 0.0.0
  */
-public class RemainingTimeCalculator {
+public class ProgressTracker {
 
     private long startNanoTime = 0;
     private long total;
@@ -37,7 +37,7 @@ public class RemainingTimeCalculator {
 
     public static void main(String[] args) {
         //Test
-        RemainingTimeCalculator rtc = new RemainingTimeCalculator(1000);
+        ProgressTracker rtc = new ProgressTracker(1000);
         for(int i = 0;i< 1000;i++) {
             try {
                 Thread.sleep((long) (Math.random() * 100));
@@ -48,7 +48,7 @@ public class RemainingTimeCalculator {
             System.out.println(rtc.currentStatus());
         }
     }
-    public RemainingTimeCalculator(final int total) {
+    public ProgressTracker(final int total) {
         this.total = total;
         this.start();
     }
