@@ -217,4 +217,8 @@ public class Element implements XmlTypeI, Buildable {
     public Elements getElements() {
         return elements;
     }
+    
+    public void insertInto(Element element) {
+        element.add(this);
+    }
 }
