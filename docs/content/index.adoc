@@ -1,0 +1,11 @@
+= Power Framework - Documentation
+
+////
++++
+title = "About"
+date = "2023-11-12"
+menu = "main"
++++
+////
+
+This site provides documentation for "Power Framework" library.

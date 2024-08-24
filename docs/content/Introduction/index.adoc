@@ -1,0 +1,128 @@
+= Power Framework - Documentation
+
+////
+weight=1000
+////
+
+////
++++
+title = "About"
+date = "2023-11-121"
+menu = "main"
++++
+////
+
+
+*Power Framework* is a multipurpose Java library.
+
+----
+class ValueHolder<T> {
+    private T value;
+    private Class clazz;
+
+    public ValueHolder(T valueIn) {
+        this.value = valueIn;
+        this.clazz = valueIn == null ? null : valueIn.getClass();
+    }
+
+    public final T getValue() {
+        return this.value;
+    }
+
+    public final Class getClassOfValue() {
+        return this.clazz;
+    }
+}
+
+class IntegerHolder extends ValueHolder<Integer> {
+
+    public IntegerHolder(Integer valueIn) {
+        super(valueIn);
+    }
+}
+
+
+enum PrimitiveType {
+    INT, LONG, FLOAT, DOUBLE, BOOLEAN;
+}
+
+class PrimitiveHolder<T> {
+    private int intValue = 0;
+    private long longValue = 0l;
+    private float floatValue = 0f;
+    private double doubleValue = 0d;
+    private boolean booleanValue = false;
+    private final PrimitiveType primitiveType;
+
+    public PrimitiveHolder(int intValueIn) {
+        this.intValue = intValueIn;
+        this.primitiveType = PrimitiveType.INT;
+    }
+
+    public PrimitiveHolder(long longValueIn) {
+        this.longValue = longValueIn;
+        this.primitiveType = PrimitiveType.LONG;
+    }
+
+    public PrimitiveHolder(float floatValueIn) {
+        this.floatValue = floatValueIn;
+        this.primitiveType = PrimitiveType.FLOAT;
+    }
+
+    public PrimitiveHolder(double doubleValueIn) {
+        this.doubleValue = doubleValueIn;
+        this.primitiveType = PrimitiveType.DOUBLE.INT;
+    }
+
+    public PrimitiveHolder(boolean booleanValueIn) {
+        this.booleanValue = booleanValueIn;
+        this.primitiveType = PrimitiveType.BOOLEAN;
+    }
+
+    public int getIntValue() {
+        if (this.primitiveType != PrimitiveType.INT) {
+            throw new RuntimeException("Unsupported method for primitive type: " + primitiveType);
+        }
+        return intValue;
+    }
+
+    public long getLongValue() {
+        if (this.primitiveType != PrimitiveType.LONG) {
+            throw new RuntimeException("Unsupported method for primitive type: " + primitiveType);
+        }
+        return longValue;
+    }
+
+    public float getFloatValue() {
+        if (this.primitiveType != PrimitiveType.FLOAT) {
+            throw new RuntimeException("Unsupported method for primitive type: " + primitiveType);
+        }
+        return floatValue;
+    }
+
+    public double getDoubleValue() {
+        if (this.primitiveType != PrimitiveType.DOUBLE) {
+            throw new RuntimeException("Unsupported method for primitive type: " + primitiveType);
+        }
+        return doubleValue;
+    }
+
+    public boolean isBooleanValue() {
+        if (this.primitiveType != PrimitiveType.BOOLEAN) {
+            throw new RuntimeException("Unsupported method for primitive type: " + primitiveType);
+        }
+        return booleanValue;
+    }
+
+    public PrimitiveType getPrimitiveType() {
+        return primitiveType;
+    }
+}
+
+public void test(String[] args) {
+    //test
+    List<PrimitiveHolder> primitiveHolderList = new ArrayList<>();
+    primitiveHolderList.add(new PrimitiveHolder(5));
+}
+
+----

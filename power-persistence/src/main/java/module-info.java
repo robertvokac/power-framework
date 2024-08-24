@@ -31,4 +31,5 @@
     requires powerframework.sql;
     requires powerframework.utils;
     requires powerframework.core;
+    requires powerframework.text;
 }

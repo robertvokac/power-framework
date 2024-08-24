@@ -56,6 +56,11 @@
             <artifactId>power-log</artifactId>
             <version>${power.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.nanoboot.powerframework</groupId>
+            <artifactId>power-text</artifactId>
+            <version>${power.version}</version>
+        </dependency>
 
         <!-- Other dependencies -->
         <dependency>

@@ -1,0 +1,24 @@
+= Shark
+
+////
+weight=800
+////
+
+////
++++
+title = "About"
+date = "2023-11-12"
+menu = "main"
++++
+////
+
+----
+if a > 1 do write("ahoj svete") enddo else do write(2) enddo
+bol
+dec
+num
+bigdec
+bignum
+str
+bol a = tr
+----

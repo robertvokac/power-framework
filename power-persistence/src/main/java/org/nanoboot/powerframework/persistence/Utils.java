@@ -21,6 +21,7 @@
 package org.nanoboot.powerframework.persistence;
 
 import java.util.UUID;
+import org.nanoboot.powerframework.text.TextUtils;
 
 /**
  * Here goes the description of this class.
@@ -55,15 +56,11 @@ public class Utils {
     }
 
     static String createSetMethodName(String javaName) {
-        return SET + makeFirstLetterUpperCase(javaName);
+        return SET + TextUtils.makeFirstLetterUpperCase(javaName);
     }
 
     static String createGetMethodName(String javaName) {
-        return GET + makeFirstLetterUpperCase(javaName);
-    }
-
-    private static String makeFirstLetterUpperCase(String string) {
-        return string.substring(0, 1).toUpperCase() + string.substring(1, string.length());
+        return GET + TextUtils.makeFirstLetterUpperCase(javaName);
     }
 
     static String getUUIDFrom(Object object) {

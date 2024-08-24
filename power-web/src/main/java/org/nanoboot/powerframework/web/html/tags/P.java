@@ -20,10 +20,9 @@
 
 package org.nanoboot.powerframework.web.html.tags;
 
-import org.nanoboot.powerframework.xml.XmlUtils;
 import org.nanoboot.powerframework.web.html.WebElement;
 import org.nanoboot.powerframework.xml.XmlTypeI;
-import lombok.Data;
+import org.nanoboot.powerframework.xml.XmlUtils;
 
 import java.util.Set;
 /**
@@ -32,23 +31,25 @@ import java.util.Set;
  * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
  * @since 0.0.0
  */
+public final class P extends WebElement {
+    public static final String NAME = "p";
 
-@Data
-public class Html extends WebElement {
-    public static final String NAME = "html";
-    public static final Set<String> ALLOWED_ELEMENTS= XmlUtils.createNewSet(Head.NAME,Body.NAME);
+    public static final Set<String> ALLOWED_ATTRIBUTES
+            = XmlUtils.createNewSet();
 
-    public Html() {
-        super(NAME);
-    }
-
-    public Html(XmlTypeI xmlTypes) {
+    public P(XmlTypeI xmlTypes) {
         this();
         add(xmlTypes);
     }
 
-    @Override
-    public Set<String> getAllowedElements() {
-        return ALLOWED_ELEMENTS;
+    public P() {
+        super(NAME);
+
     }
+
+    @Override
+    public Set<String> getAllowedAttributes() {
+        return ALLOWED_ATTRIBUTES;
+    }
+
 }

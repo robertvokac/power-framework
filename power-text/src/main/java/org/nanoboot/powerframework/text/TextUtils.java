@@ -1,4 +1,3 @@
-
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // power-framework: Java library with many purposes of usage.
 // Copyright (C) 2016-2022 the original author or authors.
@@ -17,38 +16,19 @@
 // License along with this library; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 ///////////////////////////////////////////////////////////////////////////////////////////////
+package org.nanoboot.powerframework.text;
 
-package org.nanoboot.powerframework.web.html.tags;
-
-import org.nanoboot.powerframework.xml.XmlUtils;
-import org.nanoboot.powerframework.web.html.WebElement;
-import org.nanoboot.powerframework.xml.XmlTypeI;
-import lombok.Data;
-
-import java.util.Set;
 /**
- * 
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
- * @since 0.0.0
+ * @author robertvokac
  */
+public class TextUtils {
 
-@Data
-public class Html extends WebElement {
-    public static final String NAME = "html";
-    public static final Set<String> ALLOWED_ELEMENTS= XmlUtils.createNewSet(Head.NAME,Body.NAME);
-
-    public Html() {
-        super(NAME);
+    private TextUtils() {
+        //Not meant to be instantiated.
     }
 
-    public Html(XmlTypeI xmlTypes) {
-        this();
-        add(xmlTypes);
-    }
-
-    @Override
-    public Set<String> getAllowedElements() {
-        return ALLOWED_ELEMENTS;
+    public static String makeFirstLetterUpperCase(String string) {
+        return Character.toUpperCase(string.charAt(0)) + (string.length() > 1 ? string.substring(1, string.length()) : "");
     }
 }

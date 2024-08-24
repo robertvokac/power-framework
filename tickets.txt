@@ -1,0 +1,22 @@
+Duration - class change - if hours or minutes or seconds are less than 10, one leading zero should be added before. if milliseconds are less than 10 or less than 100, one ore two leading zero should be added before.
+ 
+datetime package improvements - add to LocalDate class methods: getMonthOfMonth getMonthOfYear; are DateTimes equals; add to DateTime class methods: getDate, getTime is before or after Duration: plusYears, minusYears
+new json methods: getAsString and similar
+Json object validation - Every json object will have new field validationJsonObject, this field will have default value null new methods: setValidationJsonObject,getValidationJsonObject,validate. The validation json object will be set only to the root json object. The validation json object will be an instance of Json Object with special structure- json schema- some json schemas now exists, but it will be needed create custom schema for okay.json.JsonObject
+Parsing JsonObject- if an error occured, it does not say, what and where happened
+add virtual keyboard to view module
+check okay.database.Database.createInMemoryDatabaseConnection() method : This method seemed not to work properly. There were some crashes.
+sqlmapper
+Power View : Implement NumericMinusPlus
+Power View : Implement TabPane
+Power View : Remove S from names of the classes and Remove SLayout class- SLayout class will be replaced by the CellLayout class
+Power View : Implement ComboBox
+Power View : Implement RadioButton and RadioButtonGroup- JavaFX implementation will not be used.
+Power View : Implement Slider
+Power View : Implement Scroll and ScrollPane
+Power View : Implement DatePicker control
+Power View : Implement analog clock and digital clock
+Power View : Implement ColourPicker control
+Power View : Implement Pager control : First Previous 4 5 6 Next Last
+Title icon is too close to the text
+Implement custom window management independent on platform

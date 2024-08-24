@@ -1,0 +1,79 @@
+= Utils
+
+////
+weight=800
+////
+
+////
++++
+title = "About"
+date = "2023-11-12"
+menu = "main"
++++
+////
+
+----
+private boolean isInRange(final int value, final int min, final int max) {
+return ((value >= min) && (value <= max));
+}
+----
+
+
+----
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+import sun.nio.cs.StandardCharsets;
+
+    
+    /**
+     * Converts byte array to its hexadecimal representation
+     *
+     * @param byteArray
+     * @return
+     * @throws UnsupportedEncodingException
+     */
+    private static String convertByteArrayToHex(final byte[] byteArray) {
+        StringBuffer sb = new StringBuffer();
+
+        for (int i = 0; i < byteArray.length; i++) {
+            byte b = byteArray[i];
+            sb.append(byteToHex(b));
+        }
+        String result = sb.toString();
+        return result;
+    }
+
+    private final static char[] HEX_CHARS = new char[] {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+
+    private static String byteToHex(byte b) {
+        int number = b;
+
+        // standardization from byte
+        if (number < 0) {
+            number = 256 + number;
+        }
+
+        int b1 = number / 16;
+        int b2 = number - b1 * 16;
+        String char1 = String.valueOf(HEX_CHARS[b1]);
+        String char2 = String.valueOf(HEX_CHARS[b2]);
+        return char1 + char2;
+    }
+
+
+  
+
+    private static String byteToHex(final byte[] hash) {
+        Formatter formatter = new Formatter();
+        for (byte b : hash) {
+            formatter.format("%02x", b);
+        }
+        String result = formatter.toString();
+        formatter.close();
+        return result;
+    }
+
+
+----
