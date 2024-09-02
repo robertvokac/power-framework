@@ -3,7 +3,7 @@
 ## Important notes to read first:
 
  1. This is a hobbyist project. 
- 2. This project is licenced as LGPL 2.1, which also means it is distributed without any warranty. 
+ 2. This project is licenced as GPL 3 or later (at your option), which also means it is distributed without any warranty. 
  3. In case, you find a bug or propose an improvement:
    * Raise an issue or participate a new discussion.
    
