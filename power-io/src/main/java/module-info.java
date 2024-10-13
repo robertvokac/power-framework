@@ -22,7 +22,7 @@
 /**
  * 
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
+ * @author <a href="mailto:robertvokac@robertvokac.com">Robert Vokac</a>
  * @since 0.0.0
  */
 
@@ -33,6 +33,6 @@ module powerframework.io {
     requires powerframework.log;
     requires java.logging;
     requires powerframework.utils;
-    exports org.nanoboot.powerframework.io.bit.base64;
-    exports org.nanoboot.powerframework.io.utils;
+    exports com.robertvokac.powerframework.io.bit.base64;
+    exports com.robertvokac.powerframework.io.utils;
 }

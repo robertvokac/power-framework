@@ -22,12 +22,12 @@
 /**
  * 
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
+ * @author <a href="mailto:robertvokac@robertvokac.com">Robert Vokac</a>
  * @since 0.0.0
  */
 module powerframework.core {
     requires lombok;
-    exports org.nanoboot.powerframework.core;
-    exports org.nanoboot.powerframework.core.exceptions;
-    exports org.nanoboot.powerframework.core.version;
+    exports com.robertvokac.powerframework.core;
+    exports com.robertvokac.powerframework.core.exceptions;
+    exports com.robertvokac.powerframework.core.version;
 }

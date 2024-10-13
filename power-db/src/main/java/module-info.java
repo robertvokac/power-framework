@@ -22,11 +22,11 @@
 /**
  * 
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
+ * @author <a href="mailto:robertvokac@robertvokac.com">Robert Vokac</a>
  * @since 0.0.0
  */
 module powerframework.db {
-    exports org.nanoboot.powerframework.db.manager;
+    exports com.robertvokac.powerframework.db.manager;
     requires powerframework.core;
     requires java.sql;
     requires powerframework.json;

@@ -22,7 +22,7 @@
 /**
  * 
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
+ * @author <a href="mailto:robertvokac@robertvokac.com">Robert Vokac</a>
  * @since 0.0.0
  */
 
@@ -30,8 +30,8 @@ module powerframework.web {
     requires lombok;
     requires org.jsoup;
     requires powerframework.xml;
-    exports org.nanoboot.powerframework.web.html;
-    exports org.nanoboot.powerframework.web.html.attributes;
-    exports org.nanoboot.powerframework.web.html.tags;
-    exports org.nanoboot.powerframework.web;
+    exports com.robertvokac.powerframework.web.html;
+    exports com.robertvokac.powerframework.web.html.attributes;
+    exports com.robertvokac.powerframework.web.html.tags;
+    exports com.robertvokac.powerframework.web;
 }

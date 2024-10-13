@@ -22,13 +22,13 @@
 /**
  * 
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
+ * @author <a href="mailto:robertvokac@robertvokac.com">Robert Vokac</a>
  * @since 0.0.0
  */
 module powerframework.time {
-    exports org.nanoboot.powerframework.time.duration;
-    exports org.nanoboot.powerframework.time.moment;
-    exports org.nanoboot.powerframework.time.utils;
+    exports com.robertvokac.powerframework.time.duration;
+    exports com.robertvokac.powerframework.time.moment;
+    exports com.robertvokac.powerframework.time.utils;
     requires powerframework.random;
     requires powerframework.utils;
     requires powerframework.core;

@@ -24,13 +24,13 @@
 /**
  * 
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
+ * @author <a href="mailto:robertvokac@robertvokac.com">Robert Vokac</a>
  * @since 0.0.0
  */
 
 module powerframework.collections {
-    exports org.nanoboot.powerframework.collections;
-    exports org.nanoboot.powerframework.collections.arrays;
+    exports com.robertvokac.powerframework.collections;
+    exports com.robertvokac.powerframework.collections.arrays;
     requires powerframework.core;
     requires powerframework.random;
     requires powerframework.utils;

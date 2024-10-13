@@ -22,12 +22,12 @@
 /**
  * 
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
+ * @author <a href="mailto:robertvokac@robertvokac.com">Robert Vokac</a>
  * @since 0.0.0
  */
 module powerframework.sql {
-    exports org.nanoboot.powerframework.sql.core;
-    exports org.nanoboot.powerframework.sql.filter;
+    exports com.robertvokac.powerframework.sql.core;
+    exports com.robertvokac.powerframework.sql.filter;
     requires lombok;
     requires powerframework.json;
 }

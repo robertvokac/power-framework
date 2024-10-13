@@ -22,12 +22,12 @@
 /**
  * 
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
+ * @author <a href="mailto:robertvokac@robertvokac.com">Robert Vokac</a>
  * @since 0.0.0
  */
 module powerframework.security {
-    exports org.nanoboot.powerframework.security.hash.api;
-    exports org.nanoboot.powerframework.security.hash.locator;
+    exports com.robertvokac.powerframework.security.hash.api;
+    exports com.robertvokac.powerframework.security.hash.locator;
     requires lombok;
     requires powerframework.core;
 }

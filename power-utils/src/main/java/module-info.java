@@ -22,7 +22,7 @@
 /**
  * 
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
+ * @author <a href="mailto:robertvokac@robertvokac.com">Robert Vokac</a>
  * @since 0.0.0
  */
 module powerframework.utils {
@@ -31,8 +31,8 @@ module powerframework.utils {
     requires powerframework.text;
     requires powerframework.reflection;
     requires org.jgrapht.core;
-    exports org.nanoboot.powerframework.utils;
-    exports org.nanoboot.powerframework.utils.annotations;
-    exports org.nanoboot.powerframework.utils.dependencies;
-    exports org.nanoboot.powerframework.utils.functions;
+    exports com.robertvokac.powerframework.utils;
+    exports com.robertvokac.powerframework.utils.annotations;
+    exports com.robertvokac.powerframework.utils.dependencies;
+    exports com.robertvokac.powerframework.utils.functions;
 }

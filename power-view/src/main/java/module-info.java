@@ -22,7 +22,7 @@
 /**
  * 
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
+ * @author <a href="mailto:robertvokac@robertvokac.com">Robert Vokac</a>
  * @since 0.0.0
  */
 module powerframework.view {
@@ -31,9 +31,9 @@ module powerframework.view {
     requires java.logging;
     requires powerframework.random;
     requires powerframework.core;
-    exports org.nanoboot.powerframework.view;
-    exports org.nanoboot.powerframework.view.window;
-    exports org.nanoboot.powerframework.view.window.controls;
-    exports org.nanoboot.powerframework.view.layouts;
-    exports org.nanoboot.powerframework.view.boxes;
+    exports com.robertvokac.powerframework.view;
+    exports com.robertvokac.powerframework.view.window;
+    exports com.robertvokac.powerframework.view.window.controls;
+    exports com.robertvokac.powerframework.view.layouts;
+    exports com.robertvokac.powerframework.view.boxes;
 }

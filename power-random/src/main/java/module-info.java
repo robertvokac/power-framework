@@ -22,16 +22,16 @@
 /**
  * 
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
+ * @author <a href="mailto:robertvokac@robertvokac.com">Robert Vokac</a>
  * @since 0.0.0
  */
 
 module powerframework.random {
-    exports org.nanoboot.powerframework.random;
-    exports org.nanoboot.powerframework.random.generators;
-    exports org.nanoboot.powerframework.random.generators.linearcongruent;
-    exports org.nanoboot.powerframework.random.generators.linearcongruent.combined.w5;
-    exports org.nanoboot.powerframework.random.choicegenerators;
+    exports com.robertvokac.powerframework.random;
+    exports com.robertvokac.powerframework.random.generators;
+    exports com.robertvokac.powerframework.random.generators.linearcongruent;
+    exports com.robertvokac.powerframework.random.generators.linearcongruent.combined.w5;
+    exports com.robertvokac.powerframework.random.choicegenerators;
     requires powerframework.core;
     requires lombok;
     requires powerframework.text;

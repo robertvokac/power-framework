@@ -22,11 +22,11 @@
 /**
  * 
  *
- * @author <a href="mailto:robertvokac@nanoboot.org">Robert Vokac</a>
+ * @author <a href="mailto:robertvokac@robertvokac.com">Robert Vokac</a>
  * @since 0.0.0
  */
 module powerframework.text {
-    exports org.nanoboot.powerframework.text;
+    exports com.robertvokac.powerframework.text;
     requires powerframework.core;
     requires lombok;
 }
